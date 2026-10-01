@@ -442,6 +442,20 @@ textarea{resize:vertical;min-height:110px}
   box-shadow:0 4px 14px rgba(45,122,62,.35);
 }
 .btn-submit:hover{background:#1E5C2C;transform:translateY(-2px);box-shadow:0 6px 20px rgba(45,122,62,.42)}
+.label-opt{font-weight:500;color:var(--text-soft)}
+.file-drop{
+  display:flex;align-items:center;gap:14px;cursor:pointer;
+  border:1.5px dashed var(--rule);border-radius:var(--radius);background:var(--bg);
+  padding:14px 16px;transition:border-color .2s,background .2s;
+}
+.file-drop:hover,.file-drop:focus-within{border-color:var(--green);background:rgba(45,122,62,.05)}
+.file-drop input{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+.file-drop-icon{flex-shrink:0;width:38px;height:38px;border-radius:8px;background:rgba(45,122,62,.12);color:var(--green-light);display:flex;align-items:center;justify-content:center}
+.file-drop-icon svg{width:20px;height:20px}
+.file-drop-text{display:flex;flex-direction:column;gap:2px;min-width:0}
+.file-drop-text strong{font-size:.9rem;color:var(--text);font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.file-drop-text span{font-size:.78rem;color:var(--text-soft)}
+.file-error{display:none;font-size:.8rem;color:#C0392B;font-weight:600}
 .success-msg{
   display:none;text-align:center;padding:32px;
   background:rgba(45,122,62,.08);border:1.5px solid rgba(45,122,62,.25);border-radius:var(--radius-lg);
@@ -812,23 +826,20 @@ footer{background:var(--navy-dark);padding:48px 0 28px;color:rgba(255,255,255,.6
   </div>
 </div>
 
-<!-- ── COOPERATIVE PURCHASING ────────────────────────────── -->
-<section class="coop" id="purchasing">
+<!-- ── TESTIMONIAL ───────────────────────────────────────── -->
+<section class="testimonials">
   <div class="container">
-    <div class="coop-inner">
-      <div class="coop-copy">
-        <p class="section-label">Cooperative Purchasing</p>
-        <h2 class="section-title">Simplified Public-Sector Purchasing</h2>
-        <p class="section-sub">Aven Air Group supports public agencies through established cooperative purchasing contracts, helping schools, government agencies and other eligible organizations simplify procurement and access competitively sourced filtration products.</p>
-        <a href="#quote" class="btn-primary coop-btn">View Purchasing Options →</a>
-      </div>
-      <div class="coop-contracts">
-        <div class="coop-card">
-          <div class="coop-mark">TIPS</div>
-          <div>
-            <div class="coop-name">TIPS — The Interlocal Purchasing System</div>
-            <div class="coop-status">Awarded Contract Vendor</div>
-          </div>
+    <div class="section-header centered">
+      <p class="section-label">What Clients Say</p>
+      <h2 class="section-title">Trusted by Facilities Teams Nationwide</h2>
+    </div>
+    <div class="testimonial-card">
+      <p class="testimonial-quote">Aven has been a valuable partner, providing reliable products, competitive pricing, and exceptional service. Their team understands our needs and consistently delivers.</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">FD</div>
+        <div>
+          <div class="author-name">Facilities Director</div>
+          <div class="author-role">Public School District</div>
         </div>
       </div>
     </div>
@@ -866,20 +877,23 @@ footer{background:var(--navy-dark);padding:48px 0 28px;color:rgba(255,255,255,.6
   </div>
 </section>
 
-<!-- ── TESTIMONIAL ───────────────────────────────────────── -->
-<section class="testimonials">
+<!-- ── COOPERATIVE PURCHASING ────────────────────────────── -->
+<section class="coop" id="purchasing">
   <div class="container">
-    <div class="section-header centered">
-      <p class="section-label">What Clients Say</p>
-      <h2 class="section-title">Trusted by Facilities Teams Nationwide</h2>
-    </div>
-    <div class="testimonial-card">
-      <p class="testimonial-quote">Aven has been a valuable partner, providing reliable products, competitive pricing, and exceptional service. Their team understands our needs and consistently delivers.</p>
-      <div class="testimonial-author">
-        <div class="author-avatar">FD</div>
-        <div>
-          <div class="author-name">Facilities Director</div>
-          <div class="author-role">Public School District</div>
+    <div class="coop-inner">
+      <div class="coop-copy">
+        <p class="section-label">Cooperative Purchasing</p>
+        <h2 class="section-title">Simplified Public-Sector Purchasing</h2>
+        <p class="section-sub">Aven Air Group supports public agencies through established cooperative purchasing contracts, helping schools, government agencies and other eligible organizations simplify procurement and access competitively sourced filtration products.</p>
+        <a href="#quote" class="btn-primary coop-btn">View Purchasing Options →</a>
+      </div>
+      <div class="coop-contracts">
+        <div class="coop-card">
+          <div class="coop-mark">TIPS</div>
+          <div>
+            <div class="coop-name">TIPS — The Interlocal Purchasing System</div>
+            <div class="coop-status">Awarded Contract Vendor</div>
+          </div>
         </div>
       </div>
     </div>
@@ -890,9 +904,9 @@ footer{background:var(--navy-dark);padding:48px 0 28px;color:rgba(255,255,255,.6
 <section class="form-section" id="quote">
   <div class="container">
     <div class="section-header centered" style="margin-bottom:36px">
-      <p class="section-label">A Cleaner Tomorrow Starts Today</p>
-      <h2 class="section-title">Get a Quote</h2>
-      <p class="section-sub">Tell us about your facility and we'll respond within one business day.</p>
+      <p class="section-label">Get a Quote</p>
+      <h2 class="section-title">Have a Filter List, Specification or Unusual Application?</h2>
+      <p class="section-sub">Send it to Aven Air Group. We can review your current products, cross-reference requirements and provide a recommendation and quote.</p>
     </div>
     <div class="form-wrap">
       <div class="success-msg" id="successMsg">
@@ -900,7 +914,7 @@ footer{background:var(--navy-dark);padding:48px 0 28px;color:rgba(255,255,255,.6
         <strong>Thank you — your request was received!</strong><br>
         A member of our team will be in touch within one business day.
       </div>
-      <form id="quoteForm" action="https://formsubmit.co/Info@aven-air.com" method="POST">
+      <form id="quoteForm" action="https://formsubmit.co/Info@aven-air.com" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="_subject" value="New Quote Request — Aven Air Group">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_captcha" value="false">
@@ -943,25 +957,21 @@ footer{background:var(--navy-dark);padding:48px 0 28px;color:rgba(255,255,255,.6
             </select>
           </div>
           <div class="form-group full">
-            <label for="message">Tell us about your filtration needs</label>
-            <textarea id="message" name="Message" placeholder="Facility size, current filters, challenges you're facing, timeline…"></textarea>
+            <label for="message">Tell us what you need, or describe the filtration problem you're trying to solve.</label>
+            <textarea id="message" name="Message" placeholder="Part numbers, sizes and quantities, current filters, application details, timeline…"></textarea>
+          </div>
+          <div class="form-group full">
+            <label for="attachment">Upload Filter List / Specification / PO <span class="label-opt">(optional)</span></label>
+            <label class="file-drop" for="attachment">
+              <input type="file" id="attachment" name="attachment" accept=".pdf,.xls,.xlsx,.csv,.doc,.docx,.png,.jpg,.jpeg,.heic,.webp,application/pdf,image/*">
+              <span class="file-drop-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4M7 9l5-5 5 5"/><path d="M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"/></svg></span>
+              <span class="file-drop-text"><strong id="fileName">Choose a file</strong><span>PDF, Excel, Word or image · up to 10 MB</span></span>
+            </label>
+            <p class="file-error" id="fileError" role="alert"></p>
           </div>
         </div>
         <button type="submit" class="btn-submit">Request a Quote →</button>
       </form>
-    </div>
-  </div>
-</section>
-
-<!-- ── CTA BAND ──────────────────────────────────────────── -->
-<section class="cta-band">
-  <div class="container">
-    <p class="section-label">A Cleaner Tomorrow Starts Today</p>
-    <h2>Let's Build Healthier Spaces Together.</h2>
-    <p>Partner with Aven Air Group for trusted solutions, competitive pricing, and a healthier future.</p>
-    <div class="cta-buttons">
-      <a href="#quote" class="btn-primary">Get a Quote →</a>
-      <a href="mailto:Info@aven-air.com" class="btn-outline" style="border-color:rgba(255,255,255,.5)">Contact Us</a>
     </div>
   </div>
 </section>
@@ -1000,6 +1010,29 @@ footer{background:var(--navy-dark);padding:48px 0 28px;color:rgba(255,255,255,.6
 document.getElementById('navToggle').addEventListener('click', function() {
   document.getElementById('navLinks').classList.toggle('open');
 });
+
+// File upload: show name, enforce 10 MB FormSubmit limit
+(function(){
+  const input = document.getElementById('attachment');
+  const nameEl = document.getElementById('fileName');
+  const err = document.getElementById('fileError');
+  const form = document.getElementById('quoteForm');
+  if (!input) return;
+  function check(){
+    const f = input.files && input.files[0];
+    err.style.display = 'none';
+    if (!f) { nameEl.textContent = 'Choose a file'; return true; }
+    nameEl.textContent = f.name;
+    if (f.size > 10 * 1024 * 1024) {
+      err.textContent = 'That file is larger than 10 MB. Please send a smaller file, or email it to Info@aven-air.com.';
+      err.style.display = 'block';
+      return false;
+    }
+    return true;
+  }
+  input.addEventListener('change', check);
+  form.addEventListener('submit', function(e){ if (!check()) { e.preventDefault(); input.focus(); } });
+})();
 
 // FormSubmit success redirect
 if (window.location.search.includes('sent=true')) {
