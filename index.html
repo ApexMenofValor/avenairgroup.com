@@ -507,6 +507,8 @@ footer{background:var(--navy-dark);padding:48px 0 28px;color:rgba(255,255,255,.6
 .footer-col h4{font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:12px}
 .footer-col a{display:block;color:rgba(255,255,255,.62);margin-bottom:8px;font-size:.85rem;transition:color .2s}
 .footer-col a:hover{color:#FFFFFF}
+.footer-bottom a{color:rgba(255,255,255,.6);text-decoration:underline;text-underline-offset:3px}
+.footer-bottom a:hover{color:#fff}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.78rem;color:rgba(255,255,255,.35)}
 
 /* ── MOBILE ─────────────────────────────────────────────── */
@@ -1007,13 +1009,13 @@ footer{background:var(--navy-dark);padding:48px 0 28px;color:rgba(255,255,255,.6
         <div class="footer-col">
           <h4>Company</h4>
           <a href="#about">About Us</a>
-          <a href="mailto:Info@aven-air.com">Contact</a>
+          <a href="contact.html">Contact</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2024 Aven Air Group. All rights reserved.</span>
-      <span>Info@aven-air.com</span>
+      <span>© 2026 Aven Air Group. All rights reserved.</span>
+      <span><a href="contact.html">Contact Us</a></span>
     </div>
   </div>
 </footer>
@@ -1037,7 +1039,7 @@ document.getElementById('navToggle').addEventListener('click', function() {
     if (!f) { nameEl.textContent = 'Choose a file'; return true; }
     nameEl.textContent = f.name;
     if (f.size > 10 * 1024 * 1024) {
-      err.textContent = 'That file is larger than 10 MB. Please send a smaller file, or email it to Info@aven-air.com.';
+      err.textContent = 'That file is larger than 10 MB. Please send a smaller file, or reach us through our contact form.';
       err.style.display = 'block';
       return false;
     }
