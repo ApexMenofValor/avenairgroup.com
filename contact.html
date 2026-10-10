@@ -89,12 +89,7 @@ nav{
   display:flex;align-items:center;gap:10px;
   font-weight:800;font-size:1.15rem;letter-spacing:-.01em;color:#FFFFFF;
 }
-.nav-logo-mark{
-  width:36px;height:36px;border-radius:6px;
-  background:var(--green);
-  display:flex;align-items:center;justify-content:center;
-  font-weight:900;font-size:1.1rem;color:#FFFFFF;
-}
+.nav-logo img{display:block;height:46px;width:auto}
 .nav-links{display:flex;align-items:center;gap:28px}
 .nav-links a{color:rgba(255,255,255,.78);font-size:.93rem;font-weight:500;transition:color .2s}
 .nav-links a:hover{color:#FFFFFF}
@@ -496,7 +491,8 @@ textarea{resize:vertical;min-height:110px}
 footer{background:var(--navy-dark);padding:48px 0 28px;color:rgba(255,255,255,.6);font-size:.85rem}
 .footer-inner{max-width:1160px;margin:0 auto;padding:0 16px}
 .footer-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:32px;margin-bottom:36px}
-.footer-logo{font-weight:800;font-size:1.05rem;color:#FFFFFF;margin-bottom:8px}
+.footer-logo{margin-bottom:12px}
+.footer-logo img{display:block;height:44px;width:auto}
 .footer-tagline{font-size:.82rem;color:rgba(255,255,255,.45);max-width:240px;line-height:1.5}
 .footer-links{display:flex;gap:40px;flex-wrap:wrap}
 .footer-col h4{font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:12px}
@@ -557,9 +553,8 @@ footer{background:var(--navy-dark);padding:48px 0 28px;color:rgba(255,255,255,.6
 <body>
 <nav>
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo">
-      <div class="nav-logo-mark">A</div>
-      Aven Air Group
+    <a href="index.html" class="nav-logo" aria-label="Aven Air Group home">
+      <img src="assets/img/aven-air-logo-reversed.png" alt="Aven Air Group" width="462" height="156">
     </a>
     <div class="nav-links" id="navLinks">
       <a href="index.html#industries">Industries</a>
@@ -645,7 +640,7 @@ footer{background:var(--navy-dark);padding:48px 0 28px;color:rgba(255,255,255,.6
   <div class="footer-inner">
     <div class="footer-top">
       <div>
-        <div class="footer-logo">Aven Air Group</div>
+        <div class="footer-logo"><img src="assets/img/aven-air-logo-reversed.png" alt="Aven Air Group" width="462" height="156"></div>
         <div class="footer-tagline">Cleaner Air. Healthier People. Brighter Tomorrows.</div>
       </div>
       <div class="footer-links">
