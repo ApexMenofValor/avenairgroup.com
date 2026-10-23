@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-theme="light" lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -541,6 +541,62 @@ footer{background:var(--navy-dark);padding:48px 0 28px;color:rgba(255,255,255,.6
 @media(max-width:480px){
   .industry-grid{grid-template-columns:1fr}
 }
+
+/* ── LIGHT BACKGROUND PREVIEW OVERRIDES ───────────────── */
+nav{background:#FFFFFF;box-shadow:0 1px 0 rgba(27,58,92,.10),0 2px 12px rgba(27,58,92,.06)}
+.nav-logo{color:var(--navy)}
+.nav-links a{color:var(--text-mid)}
+.nav-links a:hover{color:var(--navy)}
+.nav-links a.btn-nav,.nav-links a.btn-nav:hover{color:#FFFFFF}
+.nav-toggle span{background:var(--navy)}
+@media(max-width:900px){.nav-links{background:#FFFFFF !important}}
+
+/* Hero: soft light wash over the photo, dark text */
+.hero{background:#EAF1F7}
+.hero-overlay{background:linear-gradient(100deg,rgba(244,247,250,.95) 0%,rgba(244,247,250,.86) 55%,rgba(244,247,250,.55) 100%)}
+.hero-eyebrow{color:var(--green)}
+.hero h1{color:var(--navy)}
+.hero h1 em{color:var(--green)}
+.hero-sub{color:var(--text-mid)}
+.btn-outline{border-color:rgba(27,58,92,.4);color:var(--navy)}
+.btn-outline:hover{border-color:var(--navy);background:rgba(27,58,92,.06)}
+.hero-stat{background:rgba(255,255,255,.85);border-color:rgba(27,58,92,.12);box-shadow:var(--shadow)}
+.hero-stat-num{color:var(--navy)}
+.hero-stat-label{color:var(--text-mid)}
+.hero-badge{background:rgba(45,122,62,.10);border-color:rgba(45,122,62,.25);color:var(--navy)}
+
+/* Value bar */
+.value-bar{background:var(--bg-alt);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.value-item{border-right-color:var(--rule)}
+.value-title{color:var(--navy)}
+.value-desc{color:var(--text-mid)}
+
+/* FFT feature card */
+.fft-feature{background:#FFFFFF;border:1px solid var(--rule)}
+.fft-copy{color:var(--text)}
+.fft-eyebrow{color:var(--green)}
+.fft-eyebrow span{color:var(--text-soft)}
+.fft-title{color:var(--navy)}
+.fft-text{color:var(--text-mid)}
+.fft-list li{color:var(--text)}
+.fft-list li::before{background:var(--green)}
+.fft-partner-label{color:var(--text-soft)}
+
+/* CTA band */
+.cta-band{background:linear-gradient(160deg,#EAF1F7 0%,#F4F7FA 50%,#E6F2E9 100%)}
+.cta-band::before{background:none}
+.cta-band .section-label{color:var(--green)}
+.cta-band h2{color:var(--navy)}
+.cta-band p{color:var(--text-mid)}
+
+/* Footer */
+footer{background:var(--bg-alt);color:var(--text-mid);border-top:1px solid var(--rule)}
+.footer-tagline,.footer-col h4{color:var(--text-soft)}
+.footer-col a{color:var(--text-mid)}
+.footer-col a:hover{color:var(--navy)}
+.footer-bottom{border-top-color:var(--rule);color:var(--text-soft)}
+.footer-bottom a{color:var(--text-mid)}
+.footer-bottom a:hover{color:var(--navy)}
 </style>
 </head>
 <body>
@@ -549,7 +605,7 @@ footer{background:var(--navy-dark);padding:48px 0 28px;color:rgba(255,255,255,.6
 <nav>
   <div class="nav-inner">
     <a href="#" class="nav-logo" aria-label="Aven Air Group home">
-      <img src="assets/img/aven-air-logo-reversed.png" alt="Aven Air Group" width="462" height="156">
+      <img src="assets/img/aven-air-logo.png" alt="Aven Air Group" width="462" height="156">
     </a>
     <div class="nav-links" id="navLinks">
       <a href="#industries">Industries</a>
@@ -991,7 +1047,7 @@ footer{background:var(--navy-dark);padding:48px 0 28px;color:rgba(255,255,255,.6
   <div class="footer-inner">
     <div class="footer-top">
       <div>
-        <div class="footer-logo"><img src="assets/img/aven-air-logo-reversed.png" alt="Aven Air Group" width="462" height="156"></div>
+        <div class="footer-logo"><img src="assets/img/aven-air-logo.png" alt="Aven Air Group" width="462" height="156"></div>
         <div class="footer-tagline">Cleaner Air. Healthier People. Brighter Tomorrows.</div>
       </div>
       <div class="footer-links">
