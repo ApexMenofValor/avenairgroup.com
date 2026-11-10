@@ -321,7 +321,11 @@ nav{
 .coop-inner{display:grid;grid-template-columns:1.3fr 1fr;gap:56px;align-items:center}
 .coop-btn{margin-top:26px}
 .coop-contracts{display:flex;flex-direction:column;gap:14px}
-.coop-card{display:flex;align-items:center;gap:18px;background:var(--surface);border:1px solid var(--rule);border-radius:var(--radius-lg);padding:22px 24px;box-shadow:var(--shadow)}
+.coop-card{display:flex;flex-direction:column;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--rule);border-radius:var(--radius-lg);padding:22px 24px;box-shadow:var(--shadow);text-align:center}
+.coop-logo{display:block;width:auto;max-width:100%}
+.coop-logo-tips{height:56px}
+/* BuyBoard standards: logo must be smaller than the vendor mark (header logo is 69px tall) and keep clear space */
+.coop-logo-bb{height:56px;margin:4px 0}
 .coop-mark{flex-shrink:0;width:64px;height:64px;border-radius:10px;background:#B3202A;color:#FFFFFF;font-weight:900;font-size:1.15rem;letter-spacing:.04em;display:flex;align-items:center;justify-content:center}
 .coop-name{font-weight:700;color:var(--text);font-size:.98rem;line-height:1.3}
 .coop-status{font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--green-light);margin-top:4px}
@@ -955,11 +959,11 @@ footer{background:var(--bg-alt);color:var(--text-mid);border-top:1px solid var(-
       </div>
       <div class="coop-contracts">
         <div class="coop-card">
-          <div class="coop-mark">TIPS</div>
-          <div>
-            <div class="coop-name">TIPS — The Interlocal Purchasing System</div>
-            <div class="coop-status">Awarded Contract Vendor</div>
-          </div>
+          <img class="coop-logo coop-logo-tips" src="assets/img/tips-awarded-vendor.png" alt="TIPS — The Interlocal Purchasing System, Awarded Vendor" width="720" loading="lazy">
+        </div>
+        <div class="coop-card">
+          <img class="coop-logo coop-logo-bb" src="assets/img/buyboard-purchasing-cooperative.png" alt="BuyBoard Purchasing Cooperative" width="613" height="225" loading="lazy">
+          <div class="coop-status">Awarded Vendor</div>
         </div>
       </div>
     </div>
