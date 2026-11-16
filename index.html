@@ -318,23 +318,34 @@ nav{
 .ind-desc sub{line-height:0}
 /* ── COOPERATIVE PURCHASING ───────────────────────────── */
 .coop{background:var(--bg-alt)}
-.coop-inner{display:grid;grid-template-columns:1.3fr 1fr;gap:56px;align-items:center}
-.coop-btn{margin-top:26px}
-.coop-contracts{display:flex;flex-direction:column;gap:14px}
-.coop-card{display:flex;flex-direction:column;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--rule);border-radius:var(--radius-lg);padding:22px 24px;box-shadow:var(--shadow);text-align:center}
-.coop-contract{font-size:.82rem;color:var(--text-mid);line-height:1.3}
-.coop-logo{display:block;width:auto;max-width:100%}
-.coop-logo-tips{height:56px}
+.coop-head{max-width:820px;margin-bottom:36px}
+.coop-head .section-sub{max-width:none}
+.coop-head .section-sub+.section-sub{margin-top:14px}
+.coop-list-title{font-size:1.05rem;font-weight:800;color:var(--text);margin-bottom:18px;letter-spacing:-.01em}
+.coop-contracts{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+/* Cards stay white in every theme so the official logos always sit on a clean light background */
+.coop-card{display:flex;flex-direction:column;align-items:center;text-align:center;background:#FFFFFF;border:1px solid rgba(27,58,92,0.12);border-radius:var(--radius-lg);padding:32px 28px 28px}
+.coop-logo-wrap{height:84px;display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.coop-logo{display:block;width:auto;height:auto;max-width:100%}
+.coop-logo-tips{max-height:60px}
 /* BuyBoard standards: logo must be smaller than the vendor mark (header logo is 69px tall) and keep clear space */
-.coop-logo-bb{height:56px;margin:4px 0}
-.coop-mark{flex-shrink:0;width:64px;height:64px;border-radius:10px;background:#B3202A;color:#FFFFFF;font-weight:900;font-size:1.15rem;letter-spacing:.04em;display:flex;align-items:center;justify-content:center}
-.coop-name{font-weight:700;color:var(--text);font-size:.98rem;line-height:1.3}
-.coop-status{font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--green-light);margin-top:4px}
+.coop-logo-bb{max-height:60px}
+.coop-name{font-weight:700;color:#0F1E2E;font-size:1.02rem;line-height:1.3}
+.coop-status{font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#2D7A3E;margin-top:6px}
+.coop-numbers{list-style:none;margin:18px 0 0;padding:16px 0 0;border-top:1px solid rgba(27,58,92,0.12);width:100%;display:flex;flex-direction:column;gap:10px}
+.coop-numbers li{font-size:.92rem;color:#3D5166;line-height:1.4}
+.coop-numbers strong{display:block;font-size:1.12rem;font-weight:800;color:#0F1E2E;letter-spacing:-.01em}
+.coop-cta{margin-top:40px;text-align:center}
+.coop-cta h3{font-size:1.25rem;font-weight:800;color:var(--text);margin-bottom:8px;letter-spacing:-.01em}
+.coop-cta p{font-size:1rem;color:var(--text-mid);line-height:1.65;max-width:680px;margin:0 auto}
+.coop-btn{margin-top:22px}
 @media(max-width:900px){
   .why-top{grid-template-columns:1fr;gap:16px}
   .why-grid{grid-template-columns:1fr 1fr}
   .ind-grid{grid-template-columns:1fr 1fr}
-  .coop-inner{grid-template-columns:1fr;gap:32px}
+}
+@media(max-width:700px){
+  .coop-contracts{grid-template-columns:1fr}
 }
 @media(max-width:560px){
   .why-grid,.ind-grid{grid-template-columns:1fr}
@@ -951,24 +962,36 @@ footer{background:var(--bg-alt);color:var(--text-mid);border-top:1px solid var(-
 <!-- ── COOPERATIVE PURCHASING ────────────────────────────── -->
 <section class="coop" id="purchasing">
   <div class="container">
-    <div class="coop-inner">
-      <div class="coop-copy">
-        <p class="section-label">Cooperative Purchasing</p>
-        <h2 class="section-title">Simplified Public-Sector Purchasing</h2>
-        <p class="section-sub">Aven Air Group supports public agencies through established cooperative purchasing contracts, helping schools, government agencies and other eligible organizations simplify procurement and access competitively sourced filtration products.</p>
-        <a href="#quote" class="btn-primary coop-btn">View Purchasing Options →</a>
+    <div class="coop-head">
+      <p class="section-label">Cooperative Purchasing</p>
+      <h2 class="section-title">Awarded Contracts. Simplified Procurement.</h2>
+      <p class="section-sub">Aven Air Group is an awarded supplier through <strong>TIPS (The Interlocal Purchasing System)</strong> and <strong>BuyBoard</strong>, helping eligible schools, colleges, municipalities, government agencies, and other public-sector organizations streamline purchasing.</p>
+      <p class="section-sub">Our cooperative purchasing contracts provide access to competitively sourced HVAC filtration, portable air purifier replacement filters, and specialty filtration solutions—backed by responsive service, dependable fulfillment, and competitive pricing.</p>
+    </div>
+    <h3 class="coop-list-title">Our Cooperative Purchasing Contracts</h3>
+    <div class="coop-contracts">
+      <div class="coop-card">
+        <div class="coop-logo-wrap"><img class="coop-logo coop-logo-tips" src="assets/img/tips-awarded-vendor.png" alt="TIPS — The Interlocal Purchasing System" width="720" height="171" loading="lazy"></div>
+        <div class="coop-name">TIPS — The Interlocal Purchasing System</div>
+        <div class="coop-status">Awarded Supplier</div>
+        <ul class="coop-numbers">
+          <li><strong>Contract #260504</strong>Maintenance, Repair &amp; Operations (MRO)</li>
+          <li><strong>Contract #260701</strong>Indoor Air Quality Equipment &amp; Services</li>
+        </ul>
       </div>
-      <div class="coop-contracts">
-        <div class="coop-card">
-          <img class="coop-logo coop-logo-tips" src="assets/img/tips-awarded-vendor.png" alt="TIPS — The Interlocal Purchasing System, Awarded Vendor" width="720" loading="lazy">
-          <div class="coop-contract">TIPS Contract MRO #260504</div>
-        </div>
-        <div class="coop-card">
-          <img class="coop-logo coop-logo-bb" src="assets/img/buyboard-purchasing-cooperative.png" alt="BuyBoard Purchasing Cooperative" width="613" height="225" loading="lazy">
-          <div class="coop-status">Awarded Vendor</div>
-          <div class="coop-contract">BuyBoard Contract #820-26</div>
-        </div>
+      <div class="coop-card">
+        <div class="coop-logo-wrap"><img class="coop-logo coop-logo-bb" src="assets/img/buyboard-purchasing-cooperative.png" alt="BuyBoard Cooperative Purchasing" width="613" height="225" loading="lazy"></div>
+        <div class="coop-name">BuyBoard</div>
+        <div class="coop-status">Awarded Supplier</div>
+        <ul class="coop-numbers">
+          <li><strong>Contract #820-26</strong>Cooperative Purchasing</li>
+        </ul>
       </div>
+    </div>
+    <div class="coop-cta">
+      <h3>Already a TIPS or BuyBoard Member?</h3>
+      <p>Let us help simplify your next filtration purchase. Send us your current filter list, specifications, or purchasing requirements, and we'll provide a competitive, no-obligation quote.</p>
+      <a href="#quote" class="btn-primary coop-btn">Request Cooperative Contract Pricing&nbsp;→</a>
     </div>
   </div>
 </section>
